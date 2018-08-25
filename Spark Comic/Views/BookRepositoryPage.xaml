@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="Spark_Comic.Views.BookRepositoryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Spark_Comic.Views"
+        xmlns:control="using:Spark_Comic.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:data="using:Spark_Comic.Models"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <Grid>
+        <GridView Name="BookGridView" Padding="4,30,4,4"   Margin="0,2,0,2" ItemClick="BookGridView_ItemClickAsync"  
+                  IsItemClickEnabled="True"  SelectionMode="None" >
+            <GridView.ItemTemplate >
+                <DataTemplate x:DataType="data:BookItem" >
+                    <control:BookItemControl  />
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>

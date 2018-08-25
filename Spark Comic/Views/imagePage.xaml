@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="Spark_Comic.Views.ImagePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Spark_Comic.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="imageView" Source="{Binding ImageSource}"></Image>
+            <TextBox Name="fileNameTextBox" Grid.Row="1" Text="{Binding Copyright}" IsReadOnly="True"></TextBox>
+            <Grid HorizontalAlignment="Stretch"  Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Content="上一张" Name="previousBtn" IsEnabled="false"  CommandParameter="上一张" HorizontalAlignment="Center" Click="previousFile" Grid.Column="0"></Button>
+                <Button Content="打开文件"  CommandParameter="打开文件" HorizontalAlignment="Center" Grid.Column="1" Click="openFolderSelect"></Button>
+                <Button Content="下一张"  Name="nextBtn"  IsEnabled="false"  CommandParameter="下一张" HorizontalAlignment="Center"  Click="nextFile" Grid.Column="2"></Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
