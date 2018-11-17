@@ -11,7 +11,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
     <Grid>
-        <GridView Name="BookGridView" Padding="4,30,4,4"   Margin="0,2,0,2" ItemClick="BookGridView_ItemClickAsync"  
+        <GridView Name="BookGridView" Padding="4,30,4,4" Margin="0,2,0,2" ItemClick="BookGridView_ItemClickAsync"  
                   IsItemClickEnabled="True"  SelectionMode="None" >
             <GridView.ItemTemplate >
                 <DataTemplate x:DataType="data:BookItem" >
